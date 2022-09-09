@@ -1,0 +1,94 @@
+.game{
+  margin: 100px auto;
+  width: 900px;
+  height: 200px;
+  border-bottom: 1px solid #000;
+  background-image: url('http://pm1.narvii.com/7406/c7dd5ca6244a7672cc5e1c6e6b301bf1f34ef86cr1-1920-1080v2_uhq.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+  position: relative;
+
+  animation: backGo 5s infinite linear;
+}
+
+@keyframes jump {
+  0%{
+    top: 150px;
+  }
+  50%{
+    top: 75px;
+  }
+  100%{
+    top: 150px;
+  }
+};
+
+
+.game:before{
+  overflow: hidden;
+  content: "";
+  width: 900px;
+  height: 200px;
+  border-bottom: 1px solid #000;
+  background-image: url('http://pm1.narvii.com/7406/c7dd5ca6244a7672cc5e1c6e6b301bf1f34ef86cr1-1920-1080v2_uhq.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translateX(100%);
+  animation: backGo2 5s infinite linear;
+}
+
+
+
+#dino{
+  width: 50px;
+  height: 50px;
+  background-image: url("https://cdn131.picsart.com/307289748092211.png");
+  background-size: 50px 50px;
+  position: relative;
+  top: 150px;
+  left: 50px;
+  transition: transform .1s linear;
+}
+
+#cactus{
+  width: 50px;
+  height: 40px;
+  background-image: url("https://image.emojipng.com/71/4808071.png");
+  background-size: 50px 40px;
+  position: relative;
+  top: 110px;
+
+  animation: cactusMov 3s infinite linear;
+}
+
+@keyframes cactusMov {
+  0%{
+    right: -100%;
+  }
+  100%{
+    right: 0%;
+  }
+}
+
+.jump{
+  animation: jump .8s linear;
+}
+
+@keyframes jump {
+  0%{
+    top: 150px;
+  }
+  50%{
+    top: 75px;
+  }
+  100%{
+    top: 150px;
+  }
+};
