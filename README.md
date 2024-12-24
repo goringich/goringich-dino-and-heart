@@ -90,4 +90,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Enjoy building and exploring **Dino and Heart**!
+Enjoy building and exploring **Frontend-Sorcery**!
