@@ -1,0 +1,54 @@
+
+/* box__card__border */
+#{$section}20{
+  padding: 0 75px;
+  justify-content: space-between;
+  background-color: $oceanBlue2;
+}
+
+.box__card__border{
+  @include fcc;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background-color: $white;
+
+  span{
+    @include a0011;
+    background-color:$oceanBlue2;
+    z-index: 10;
+  }
+  
+  h2{
+    position: relative;
+    z-index: 11;
+    color: $white;
+    font-size: 10em;
+  }
+
+  &:before{
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    transform: skewX(2deg) skewY(4deg);
+    background: linear-gradient(315deg, #00ccff, $oceanBlue2, #d400d4);
+  }
+  
+  &:after{
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    transform: skewX(2deg) skewY(4deg);
+    background: linear-gradient(315deg, #00ccff, $oceanBlue2, #d400d4);
+    filter: blur(75px);
+  }
+  
+  &:nth-child(2):before{background-image: radial-gradient(circle at 50% -20.71%, #ff7f85 0, #ff748c 8.33%, #ff6994 16.67%, #ff5d9c 25%, #ff52a4 33.33%, #ff47ad 41.67%, #f23cb5 50%, #e234be 58.33%, #cf32c8 66.67%, #b935d2 75%, #9f3bdb 83.33%, #7e42e5 91.67%, #514aed 100%);}
+  &:nth-child(3):before{background-image: radial-gradient(circle at 50% -20.71%, #b2dafc 0, #b8d9fd 6.25%, #bed7fd 12.5%, #c5d5fd 18.75%, #ccd4fc 25%, #d2d2fa 31.25%, #d9d0f8 37.5%, #dfcff5 43.75%, #e5cdf2 50%, #eaccee 56.25%, #efcaea 62.5%, #f4c9e5 68.75%, #f8c8e0 75%, #fbc8db 81.25%, #fdc7d6 87.5%, #ffc7d1 93.75%, #ffc7cc 100%);}
+}

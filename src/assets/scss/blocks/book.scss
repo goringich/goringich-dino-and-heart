@@ -1,0 +1,52 @@
+
+/* book */
+#{$section}12{
+  height: 100vh;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+
+  .book{
+    position: relative;
+    width: 383px;
+    height: 567px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, .2);
+
+    transform-style: preserve-3d;
+    transition: .5s;
+
+    &:hover{
+      transform: rotateY(35deg);
+      box-shadow: 20px 20px 20px rgba(0, 0, 0, .2);
+    }
+
+    &:active{
+      transform: rotateY(180deg);
+      box-shadow: 20px 20px 20px rgba(0, 0, 0, .2);
+    }
+
+    &:before{
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 100%;
+      transform-origin: left;
+      background: url(../images/side.jpg);
+      background-position: center;
+      transform: rotateY(90deg);
+    }
+
+    &:after{
+      content: "";
+      @include a0011;
+      transform-origin: center;
+      background: url(../images/back.jpg);
+      background-position: center;
+      transform: rotateY(180deg) translateZ(60px);
+    }
+
+    img{
+      @include a0011;
+      object-fit: cover;
+    }
+  }
+}

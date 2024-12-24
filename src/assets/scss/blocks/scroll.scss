@@ -1,0 +1,220 @@
+
+
+/* scroll */
+#{$section}13{
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif !important;
+  background: #222;
+  min-height: 300vh;
+
+  display: block;
+  position: relative;
+}
+
+#{$section}13__inner{
+  overflow: hidden;
+  @include f00;
+  @include wh1;
+  pointer-events: none;
+}
+
+.side{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300vh;
+
+  &#side1{clip-path: polygon(0 0, 0% 100%, 100% 100%);}
+  &#side2{clip-path: polygon(0 0, 100% 0%, 100% 100%);}
+  
+  video, iframe{
+    @include a0011;
+    object-fit: contain;
+  }
+}
+
+.content__sec13{
+  margin-top: 20px;
+  color: $white;
+  padding: 50px;
+
+  h2{
+    font-size: 3rem;
+    margin: 10vh 0 30px;
+  }
+
+  &--first{margin-top: 150vh !important;}
+  p{font-size: 1.2rem;}
+}
+
+
+#defaultCanvas0{
+  @include wh1;
+  z-index: 1;
+  background-color: $white;
+  z-index: 2;
+  mix-blend-mode: screen;
+}
+
+::-webkit-scrollbar{display: none;}
+
+#scroll{
+  @include f00;
+  z-index: 999 !important;
+  height: 20px;
+  width: 100%;
+
+  background: $grayBlack;
+}
+
+#scroll__progress{
+  @include f00;
+  z-index: 999 !important;
+  height: 20px;
+
+  background: linear-gradient(45deg, red, yellow);
+  animation: animateColor 1s linear infinite;
+}
+
+
+
+
+
+/* section23 */
+#{$section}23{
+  @include wh1;
+  scroll-snap-align: start;
+  background-blend-mode: multiply;
+  position: relative;
+  @include backFC;
+
+  &:nth-child(2), &:nth-child(4){
+    text-align: right;
+
+    #{$section}23__content{
+      right: 50px;
+      left: auto;
+    }
+  }
+}
+
+#{$section}23__content{
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  max-width: 700px;
+
+  h2{
+    background-color: $white;
+    color: $blackBlack;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 2em;
+  }
+  
+  p{
+    background-color: $white;
+    color: $blackBlack;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+}
+
+
+
+
+/* section28 */
+#{$section}28{
+  background-color: $black;
+  color: $white;
+  font-size: 8em;
+  @include fcc;
+  min-height: 100vh;
+}
+
+.scroll__box{
+  @include fcc;
+  min-height: 100vh;
+  background-color: $black;
+  color: $white;
+  position: relative;
+  padding: 100px;
+  display: block;
+
+  &--white{
+    background-color: $white;
+    color: $black;
+  }
+
+  h2{font-size: 3em;}
+}
+
+
+
+/* section29 */
+#{$section}29{
+  background-color: #ffee57;
+  box-sizing: border-box;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+#{$section}29__h3{
+  @include a55;
+  transform: translate(-50%, -50%);
+  margin-top: -100vh;
+  color: #0e112e;
+  font-size: 4em;
+}
+
+#{$section}29__inner1{
+  @include f00;
+  @include wh1;
+  background-color: #0e112e;
+  @include fcc;
+  clip-path: circle(0px at center center);
+}
+
+.innerText{
+  position: fixed;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  z-index: 1;
+  font-size: 10vw;
+  color: $white;
+  text-align: center;
+  width: 100%;
+}
+
+.innerText2{
+  position: fixed;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  z-index: 1;
+  font-size: 10vw;
+  color: transparent;
+  -webkit-text-stroke: 2px #0e112e;
+  text-align: center;
+  width: 100%;
+}
+
+#{$section}29__container{
+  position: relative;
+  margin-top: 200vh;
+  background-color: #0e112e;
+  padding: 100px;
+  color: $white;
+
+  h2{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+}

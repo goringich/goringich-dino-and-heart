@@ -1,0 +1,19 @@
+#{$section}__slide{
+  position: relative;
+}
+
+.slide__cursor{
+  @include a0011;
+
+  &--1{
+    background: url(../images/onewidth/pexels-eberhard-grossgasteiger-844297.jpg);
+    background-size: cover;
+    @include backFC;
+  }
+  &--2{
+    background: url(../images/onewidth/pexels-emiliano-arano-3608311.jpg);
+    @include backFC;
+    background-size: cover;
+    left: 50%;
+  }
+}

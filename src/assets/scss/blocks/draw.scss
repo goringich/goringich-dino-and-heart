@@ -1,0 +1,111 @@
+
+/* draw */
+#{$section}10{
+  box-sizing: border-box;
+  position: relative;
+  @include wh1;
+  background: #001300;
+  overflow: hidden;
+  flex-wrap: wrap;
+
+  animation: animateColor 5s linear infinite;
+
+  span{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+        
+    &:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 500%;
+      height: 500%;
+      background-color: $green;
+      box-shadow: 0 0 20px $green,
+                  0 0 40px $green,
+                  0 0 60px $green,
+                  0 0 80px $green,
+                  0 0 100px $green,
+                  0 0 120px $green;
+
+      border-radius: 50%;
+
+      transition: 2s;
+      transform: scale(0);
+    }
+
+    &:hover:before{
+      transition: 0s;
+      transform: scale(1);
+    }
+  }
+}
+
+#{$section}11{
+  box-sizing: border-box;
+  position: relative;
+  @include wh1;
+  background: #001300;
+  overflow: hidden;
+  flex-wrap: wrap;
+
+  animation: animateColor 5s linear infinite;
+
+  span{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    &:before{
+      content: "";
+      @include a0011;
+      background-color: $green;
+      box-shadow: 0 0 5px $green,
+                  0 0 10px $green,
+                  0 0 20px $green,
+                  0 0 40px $green,
+                  0 0 60px $green,
+                  0 0 80px $green;
+    
+      border-radius: 50%;
+    
+      pointer-events: none;
+    
+      transition: 2s;
+      transform: scale(0.1);
+    }
+
+    &:hover:before{
+      transition: 0s;
+      transform: scale(1);
+    }
+  }
+
+}
+
+
+
+/* draw text */
+#{$section}15{
+  position: relative;
+  background-color: $blackBlack;
+}
+
+#{$section}15__content{
+  color: $white;
+
+  h2{
+    font-size: 3em;
+    margin-bottom: 20px;
+    pointer-events: none;
+  }
+  
+  p{
+    font-size: 1.2em;
+    pointer-events: none;
+  }
+}

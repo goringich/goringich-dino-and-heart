@@ -1,0 +1,157 @@
+
+/* container */
+#{$section}14{
+  display: flex;
+  background-color: $grayBlack;
+}
+
+.card__box{
+  width: 25% !important;
+  height: 400px;
+  position: relative;
+  margin: 40px;
+  background-color: #232323;
+  border-radius: 20px;
+
+  transform-style: preserve-3d;
+
+  img{
+    @include a55;
+    max-width: 300px;
+    transition: .5s;
+    z-index: 11;
+  
+    transform-style: preserve-3d;
+    transform: translate3d(-53%, -55%, 50px) rotate(-15deg) !important;
+  }
+
+  &:nth-child(1){ .card__circle, .card__buy{background-color: #A0DA30;}}
+
+  &:nth-child(2){
+    .card__circle, .card__buy{background-color: #FF4456}
+
+    img{
+      width: 240px;
+      transform: translate3d(-50%, -50%, 100px) rotate(-55deg) !important;
+    }
+  }
+
+  &:nth-child(3){
+    .card__circle, .card__buy{background-color: #398EBC}
+
+    img{
+      width: 260px;
+      transform: translate3d(-50%, -50%, 100px) rotate(-20deg) !important;
+    }
+  }
+
+  &:nth-child(4){
+    .card__circle, .card__buy{background-color: #398EBC;}
+
+    img{
+      width: 260px;
+      transform: translate3d(-50%, -50%, 100px) rotate(-35deg) !important;
+    }
+  }
+
+  &:before, &:after{
+    position: absolute;
+    font-weight: 900;
+    /* font-size: 90px; */
+    color: $white;
+    font-style: italic;
+  
+    opacity: 0;
+    transition: .5s;
+  }
+  
+  &:before{
+    content: "NIKE";
+    top: 20px;
+    left: 20px;
+    font-size: 7em;
+  }
+  
+  &:after{
+    content: "SHOES";
+    bottom: 20px;
+    right: 20px;
+    font-size: 6em;
+  }
+
+  &:hover{
+    &:before, &:after{opacity: .04;}
+    
+    img{
+      transform: translate3d(-53%, -55%, 100px) rotate(-15deg) !important;
+    }
+
+    .card__name{
+      top: 40px;
+      opacity: 1;
+    }
+
+    .card__buy{
+      bottom: 30px;
+      opacity: 1;
+    }
+  }
+
+  /* БАТЯ */
+  &--father{
+    &:after{content: "УЛОВ" !important;}
+
+    &:before{
+      margin-top: 20px;
+      transform: translateX(-15px);
+      font-size: 5em;
+      content: "ОТЛИЧНЫЙ" !important;
+    }
+
+    &:hover{
+      &:before, &:after{opacity: .1;}
+    }
+  }
+}
+
+.card__name{
+  @include a0011;
+  text-align: center;
+  color: $white;
+  transition: .2s;
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,75px);
+  opacity: 0;
+  z-index: 10;
+}
+
+.card__circle{
+  @include a55;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: $white;
+  transform: .5s;
+  transform-style: preserve-3d;
+  z-index: 10;
+  transform: translate3d(-50%, -50%, 50px);
+  opacity: 1;
+}
+
+.card__buy{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%,0%,75px);
+  background-color: $grayBlack;
+  color: $white;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: .5s;
+  opacity: 0;
+  z-index: 10;
+}

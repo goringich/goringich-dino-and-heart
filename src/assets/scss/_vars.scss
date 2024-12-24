@@ -1,0 +1,102 @@
+$greenBlue: #03e9f4;
+$black: #000;
+$white: #fff;
+$green: #0f0;
+$secondgreen: #01fe87;
+$orange: #ff8c3b;
+$grayBlack: #333;
+$grayWhite: #ccc;
+$blackBlack: #111;
+$oceanBlue: #183954;
+$oceanBlue2: #0e1538;
+
+$section: ".section";
+$loader: ".loader";
+
+:root {
+  --img: url(../images/onewidth/pexels-bithin-raj-2763927.jpg)
+}
+
+@mixin backFC{
+  background-attachment: fixed !important;
+  background-position: center !important;
+}
+
+@mixin backFCNoI{
+  background-attachment: fixed;
+  background-position: center;
+}
+
+@mixin fcc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin wh1{
+  height: 100%;
+  width: 100%;
+}
+
+@mixin a0011{
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include wh1;
+}
+
+@mixin f00{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@mixin a55{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+$list: (
+  rgb(255, 153, 0) url(../images/backg1.jpg),
+  rgb(217, 255, 0) url(../images/backg2.jpg),
+  rgb(0, 47, 255) url(../images/backg3.jpg),
+  rgb(255, 0, 170) url(../images/backg4.jpg),
+  $greenBlue url(../images/backg5.jpg)
+);
+
+@each $list-item in $list {
+  $i: index($list, $list-item);
+  #{$section}23:nth-child(#{$i}) { 
+    background: $list-item;
+  }
+};
+
+
+
+$b: (
+  "Д" "rotate(-6deg)" "blue",
+  "я" "rotate(18deg) translateX(12%)" "red",
+  "д" "rotate(338deg)" "orange",
+  "я" "rotate(156deg) translateY(-17%)" "blue",
+  "Л" "rotate(-30deg)" "green",
+  "ё" "rotate(13deg) translateX(5%)" "red", 
+  "ш" "rotate(87deg) translate(15%, -10%)" "orange",
+  "а" "rotate(0deg)" "red"
+);
+
+@each $letter, $transform, $color in $b {
+  $i: index($b, $letter $transform $color);
+  .b#{$i}:after{
+    content: $letter ;
+    transform: #{$transform};
+    color: #{$color};
+  }
+};
+
+// nav item
+$navItemBgColor: (#81ecec, #ff7676, #55efc4, #a29bfe, #fd79a8, #ffeaa7);
+@each $color in $navItemBgColor {
+  $i: index($navItemBgColor, $color);
+  .navigation ul li:nth-child(6n+#{$i}) a:before{background-color: $color;}
+};

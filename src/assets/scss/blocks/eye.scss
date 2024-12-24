@@ -1,0 +1,36 @@
+/* loader 7 */
+#{$section}7{
+  @include wh1;
+  background-color: rgb(94, 0, 0);
+}
+
+.box{
+  display: flex;
+  
+  .eye{
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: $white;
+    border-radius: 50%;
+    margin: 0 20px;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, .2),
+          inset 0 0 15px rgb(94, 0, 0),
+          inset 0 0 25px rgb(94, 0, 0);
+
+    &:before{
+      box-sizing: border-box;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 35px;
+      transform: translate(-50%, -50%);
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: $black;
+      border: 10px solid rgb(70, 28, 0);
+    }
+  }
+}

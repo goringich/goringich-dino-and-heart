@@ -1,0 +1,28 @@
+
+/* fire */
+#{$section}8{
+  overflow: hidden;
+  background-color: #0e0e0e;
+}
+
+.text__fire{
+  position: relative;
+  width: 100%;
+  text-align: center;
+
+  filter: url(#fire);
+
+  h2{
+    position: relative;
+    color: #ffeb3b;
+    font-weight: 600;
+    font-size: 16em;
+    text-shadow: 0 0 10px $orange,
+                 0 0 40px $orange,
+                 0 0 80px $orange,
+                 0 0 160px $orange,
+                 0 0 240px $orange;
+  
+    -webkit-box-reflect: below -120px linear-gradient(transparent, $black);
+  }
+}

@@ -1,0 +1,205 @@
+@keyframes animate {
+  0%{transform: translateX(0) scale(.5);}
+  50%{transform: translateX(200px) scale(1);}
+  100%{transform: translateX(0) scale(.5);}
+}
+
+@keyframes animate2 {
+  0%{left: -100%;}
+  100%{left: 100%;}
+}
+
+@keyframes animate3 {
+  0%{left: 100%;}
+  100%{left: -100%;}
+}
+
+@keyframes animate4 {
+  0%{top: -100%;}
+  100%{top: 100%;}
+}
+
+@keyframes animate5 {
+  0%{top: 100%;}
+  100%{top: -100%;}
+}
+
+@keyframes animate6{
+  0%{transform: translate(-50%, -50%) rotate(0deg);}
+  100%{transform: translate(-50%, -50%) rotate(360deg);}
+}
+
+@keyframes animateEarch  {
+  0%{background-position: 0 0;}
+  100%{background-position: -750px 0;}
+}
+
+@keyframes animateText {
+  0%{transform: perspective(1000px) rotateY(360deg) rotateX(15deg) translateY(-30px);}
+  100%{transform: perspective(1000px) rotateY(0deg) rotateX(15deg) translateY(-30px);}
+}
+
+@keyframes animate7 {
+  0%{
+    box-shadow: 0 0 50px $green,
+          inset 0 0 50px $green;
+    filter: hue-rotate(0deg);
+  }
+  20%{
+    box-shadow: 0 0 60px $green,
+          inset 0 0 60px $green;
+  }
+  40%{
+    box-shadow: 0 0 40px $green,
+          inset 0 0 40px $green;
+  }
+  60%{
+    box-shadow: 0 0 80px $green,
+          inset 0 0 80px $green;
+  }
+  80%{
+    box-shadow: 0 0 100px $green,
+          inset 0 0 100px $green;
+  }
+  100%{
+    box-shadow: 0 0 50px $green,
+          inset 0 0 50px $green;
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes animate8 {
+  0%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  99%, 100%{
+    transform: translateY(-1500%);
+    opacity: 0;
+  }
+}
+
+@keyframes cursor {
+  0%{transform: rotate(360deg);}
+  100%{transform: rotate(0deg);}
+}
+
+@keyframes loader8 {
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
+
+@keyframes animate9 {
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(90deg);}
+}
+
+@keyframes animateColor {
+  0%{filter: hue-rotate(0deg);}
+  100%{filter: hue-rotate(360deg);}
+}
+
+@keyframes animateWaterText {
+  0%{clip-path: polygon(0 53%, 13% 52%, 24% 55%, 35% 60%, 46% 65%, 64% 65%, 82% 58%, 99% 56%, 100% 99%, 0% 99%);}
+  50%{clip-path: polygon(0 39%, 7% 54%, 21% 60%, 36% 64%, 52% 58%, 68% 50%, 85% 44%, 100% 40%, 100% 99%, 0% 99%);}
+  100%{clip-path: polygon(0 53%, 13% 52%, 24% 55%, 35% 60%, 46% 65%, 64% 65%, 82% 58%, 99% 56%, 100% 99%, 0% 99%);}
+}
+
+@keyframes animateBtn{
+  0%{
+    width: 0px;
+    height: 0px;
+    opacity: .5;
+  }
+  100%{
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+@keyframes rot{
+  0%{transform: scale(1);}
+  80%, 100%{transform: scale(0);}
+}
+
+@keyframes scale{
+  from{transform: scale(1);}
+  to{transform: scale(0);}
+}
+
+@keyframes textAnim{
+  0%{left: 110%;}
+  100%{left: -20%;}
+}
+
+@keyframes op{
+  0%, 100%{opacity: 0;}
+  1%, 99%{opacity: .8;}
+}
+
+@keyframes roadGo{
+  0%{background-position: 0px;}
+  100%{background-position: -120px;}
+}
+
+@keyframes girlGo{
+  0%{background-position: 0;}
+  100%{background-position: -1536px;}
+}
+
+@keyframes pixelButton{
+  0%{background-position-y: 0;}
+  80%{
+    background-position-y: calc(8*120px);
+    transform: scale(1);
+  }
+  95%{transform: scale(2);}
+  100%{transform: scale(0);}
+}
+
+
+@keyframes imageThreeDTwo{
+  0%{
+    transform: translateZ(0px) rotate(0deg);
+    background: var(--img);
+    @include backFCNoI;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  }
+  100%{
+    transform: translateZ(2000px) rotate(calc(5*360deg));;
+    background: var(--img);
+    @include backFCNoI;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0);
+    border: 1px solid rgba(0,0,0,.1);
+  }
+}
+
+@keyframes imageThreeD{
+  0%{
+    transform: translateZ(2000px) rotate(0deg);
+    background: var(--img);
+    @include backFCNoI;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  }
+  100%{
+    transform: translateZ(0px) rotate(calc(5*360deg));
+    background: var(--img);
+    @include backFCNoI;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0);
+  }
+}
+
+@keyframes backGrButton{
+  0%{background-position: 0%;}
+  100%{background-position: 400%;}
+}
+
+@keyframes textBorder{
+  0%,10%,100%{width: 0%;}
+  70%,90%{width: 100%;}
+}

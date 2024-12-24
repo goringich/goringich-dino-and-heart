@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Index</title>
+<link rel="stylesheet" href="assets/css/style.min.css"></head>
+<body>
+    <!-- cursor -->
+    <h2 class='text'>Мама привет, как дела?</h2>
+    <!-- scroll -->
+    <div id="scroll"><div id="scroll__progress"></div></div>
+    
+    <button class="burger__parent">
+      <div class="burger"></div>
+    </button>
+    <section class="navigation">
+      <ul>
+        <li><a href="index.html" data-text="First Page">First Page</a></li>
+        <li><a href="index2.html" data-text="Second Page">Second Page</a></li>
+        <li><a href="index3.html" data-text="Third Page">Third Page</a></li>
+        <li><a href="pageScroll.html" data-text="Page Scroll">Page Scroll</a></li>
+        <li><a href="дядя-Леша.html" data-text="Дядя-Лёша">Дядя-Лёша</a></li>
+      </ul>
+    </section>    
+    <section class="section1">
+      <a href="index2.html" class="btngr">Следующая страница</a>
+    </section>
+    
+    <!-- loader21-->
+    <section class="section21"><div class="loader21"></div></section>
+    
+    <!-- loader1 -->
+    <section class="section1 section1--mt0"><div class="loader"></div></section>
+    
+    <!-- loader2 -->
+    <section class="section2"><div class="loader2"></div></section>
+    
+    <!-- loader3 -->
+    <section class="section3">
+      <div class="loader3">
+        <div class="loader3 loader3__inner loader3__inner--1"></div>
+        <div class="loader3 loader3__inner loader3__inner--2"></div>
+      </div>
+    </section>
+    
+    
+    <!-- loader6 -->
+    <section class="section6">
+      <h2>Пузырьки</h2>
+    </section>
+    
+    <!-- loader8 -->
+    <section class="section9"><div class="loader8"></div></section>
+    
+    <!-- draw -->
+    <section class="section10"></section>
+    
+    <!-- draw2 -->
+    <section class="section11"></section>
+    
+    <!-- draw3 -->
+    <!-- <main> -->
+      <section class="section15">
+        <div class="container">
+          <div class="section15__content">
+            <h2>Scratch-Off Reveal Content Effects</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore quia eaque itaque perspiciatis quisquam enim, dignissimos corporis voluptatem est eum facilis provident commodi temporibus iste id cum? Tempore, dignissimos fugiat odit deleniti pariatur ipsum dolores vel eius. Dignissimos soluta ratione eum quasi expedita tenetur harum nihil corrupti facilis distinctio. Accusantium.</p>
+            <br/>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore quia eaque itaque perspiciatis quisquam enim, dignissimos corporis voluptatem est eum facilis provident commodi temporibus iste id cum? Tempore, dignissimos fugiat odit deleniti pariatur ipsum dolores vel eius. Dignissimos soluta ratione eum quasi expedita tenetur harum nihil corrupti facilis distinctio. Accusantium.</p>
+          </div>
+        </div>
+      </section>
+    <!-- </main> -->
+    
+    <!-- loader7 -->
+    <section class="section7">
+      <div class="box">
+        <div class="eye"></div>
+        <div class="eye"></div>
+      </div>
+    </section>
+    
+    
+    <section class="section16">
+      <img class="bg" src="https://3.downloader.disk.yandex.ru/preview/5ebe12a811b17c5b56c34dc35853ca2b7e4a8e93b7cfe15de782788b30239bcb/inf/PR5hj1ZqajHLIEwFj5rtoKW9SSuWfgMCJ7lKSEogFu6OUgtidl7LTlCM6KRHyctJvmrT8NWy6B8i5xiwHCTcKw%3D%3D?uid=816604504&filename=%D0%B7%D0%B0%D0%BC%D0%BE%D0%BA3.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=816604504&tknv=v2&size=1898x902" alt="">
+      <div id="particles-js"></div>
+    </section>
+    
+    
+    <script>
+    
+      
+      function setup(){
+        // const can = createCanvas(windowWidth, windowHeight)
+        createCanvas(windowWidth, windowHeight)
+        // section15
+        const main = document.querySelector("main")
+        main.style.transform = `translateY(-373%);`
+      }
+    
+      function draw(){
+        strokeWeight(100)
+        if(mouseIsPressed){
+          line(mouseX, mouseY, pmouseX, pmouseY)
+        }
+      }
+    </script>
+
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- sketch -->
+<script src="https://rawgithub.com/soulwire/sketch.js/master/js/sketch.min.js"></script>
+
+<!-- p5 -->
+<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+
+<!-- trigger scroll -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+
+<!-- pixiJs -->
+<script src="https://pixijs.download/v6.1.2/pixi.min.js"></script>
+
+<!-- three -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/OrbitControls-2.js"></script>
+
+<!-- app -->
+<script src="assets/js/app.js"></script>
+</body>
+</html>

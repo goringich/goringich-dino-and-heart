@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Дядя Леша</title>
+<link rel="stylesheet" href="assets/css/style.min.css"></head>
+<body>
+    <!-- cursor -->
+    <h2 class='text'>Мама привет, как дела?</h2>
+    <!-- scroll -->
+    <div id="scroll"><div id="scroll__progress"></div></div>
+    
+    <button class="burger__parent">
+      <div class="burger"></div>
+    </button>
+    <section class="navigation">
+      <ul>
+        <li><a href="index.html" data-text="First Page">First Page</a></li>
+        <li><a href="index2.html" data-text="Second Page">Second Page</a></li>
+        <li><a href="index3.html" data-text="Third Page">Third Page</a></li>
+        <li><a href="pageScroll.html" data-text="Page Scroll">Page Scroll</a></li>
+        <li><a href="дядя-Леша.html" data-text="Дядя-Лёша">Дядя-Лёша</a></li>
+      </ul>
+    </section>      <!-- <section class="section1">
+        <a href="pageScroll.html" class="btngr">Следующая страница</a>
+      </section> -->
+    
+      <section class="section__google">
+        <div class="main2">
+          <div class="uncleAlex">
+            <span class="b b1">Д</span>
+            <span class="b b2">я</span>
+            <span class="b b3">д</span>
+            <span class="b b4">я</span>
+            <span class="b b5">Л</span>
+            <span class="b b6">е</span>
+            <span class="b b7">ш</span>
+            <span class="b b8">а</span>
+          </div>
+          <div class="search">
+            <input type="text" class="query">
+            <div class="icons">
+              <div class="icons1"><img src="assets/images/google/search.png" alt=""></div>
+              <div class="icons2"><img src="assets/images/google/mic.png" alt=""></div>
+            </div>
+            <div class="button__search">
+              <button>Дядя-Леша поиск</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    
+    
+      <!-- <section class="section1">
+        <a href="index.html" class="btngr">Самая первая страница</a>
+      </section> -->
+    
+      <script>
+        const icon1 = document.querySelector(".icons1")
+        const button = document.querySelector(".button__search button")
+    
+        const openUrl = () => {
+          let url = document.querySelector(".query").value
+          window.open("https://www.google.com/search?q=" + url)
+        }
+    
+        button.onclick = openUrl
+        //function openUrl(){
+          //let url = document.querySelector(".query").value
+          //window.open("https://www.google.com/search?q=" + url)
+        //}
+        icon1.onclick = openUrl
+        //function openUrl(){
+          //let url = document.querySelector(".query").value
+          //window.open("https://www.google.com/search?q=" + url)
+        //}
+      </script>
+    
+    <style>.text{color: #000;}</style>
+
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- sketch -->
+<script src="https://rawgithub.com/soulwire/sketch.js/master/js/sketch.min.js"></script>
+
+<!-- p5 -->
+<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+
+<!-- trigger scroll -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+
+<!-- pixiJs -->
+<script src="https://pixijs.download/v6.1.2/pixi.min.js"></script>
+
+<!-- three -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/OrbitControls-2.js"></script>
+
+<!-- app -->
+<script src="assets/js/app.js"></script>
+</body>
+</html>

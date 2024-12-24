@@ -1,0 +1,80 @@
+#{$section}__google{font-family: "Rampart One script=latin rev=2" !important;}
+
+.main2{
+  width: 580px;
+  margin: 0 20px;
+  @include fcc;
+  flex-direction: column;
+}
+
+.search{
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.query{
+  width: 100%;
+  padding: 13px 45px;
+  border: 1px solid $grayWhite;
+  outline: none;
+  font-size: 16px;
+  border-radius: 30px;
+
+  &:hover{
+    border: 1px solid $grayWhite;
+    outline: none;
+  }
+}
+
+.b{
+  font-size: 70px;
+  letter-spacing: .01em;
+  position: relative;
+  color: transparent;
+
+  &:after{
+    display: block;
+    @include a0011;
+    z-index: 1;
+    font-size: 70px;
+    letter-spacing: .01em;
+    font-weight: 900;
+    text-shadow: 2px 0 0 $black, -2px 0 0 $black, 0 2px 0 $black, 0 -2px 0 $black, 1px 1px $black, -1px -1px 0 $black, 1px -1px 0 $black, -1px 1px 0 $black;
+  }
+}
+
+.icons{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  pointer-events: none;
+
+  img{
+    max-width: 100%;
+  }
+}
+
+.button__search {
+  text-align: center;
+
+  button{
+    margin: 25px auto 0;
+    padding: 12px 20px;
+    color: #555;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    outline: none;
+    
+    &:hover{
+      border: 1px solid $grayWhite;
+    }
+  }
+}

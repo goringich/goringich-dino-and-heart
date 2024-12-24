@@ -1,0 +1,55 @@
+
+/* earch */
+.space{
+  background: url(../images/bg.jpg);
+  background-size: cover;
+  @include backFC;
+}
+
+#{$section}4{
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.earch{
+  @include a55;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: url(../images/image.jpg);
+  background-size: cover;
+  background-repeat: repeat-x;
+  border-radius: 50%;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 1),
+                    0 0 50px rgba(0, 0, 0, 1);
+
+  animation: animateEarch 15s linear infinite;
+}
+
+#{$section}4 .circle{
+  transform-style: preserve-3d;
+  animation: animateText 10s linear infinite;
+
+  span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $white;
+    color: #35146f;
+    font-size: 2em;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    padding: 5px 20px 7px;
+    transform: rotateY(calc(var(--i) * calc(360deg / 24))) translateZ(200px);
+    border-top: 3px solid #52146f;
+    border-bottom: 3px solid #52146f;
+
+    &:before{
+      content: "";
+      @include a0011;
+      background: $white;
+      transform: translateZ(-5px);
+    }
+  }
+}

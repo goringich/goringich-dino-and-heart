@@ -1,0 +1,148 @@
+
+/* section24 */
+#{$section}24{
+  min-height: 125vh;
+  box-sizing: border-box;
+  background-color: $black;
+}
+
+#{$section}24__inner{
+  @include wh1;
+  transform-style: preserve-3d;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.images__box{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(0deg) rotateY(35deg);
+}
+
+.img__3d{
+  @include a0011;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateX(calc(var(--h) * 45deg)) translateZ(300px);
+
+  img{
+    width: 300px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+  }
+}
+
+.images__box2{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+
+.img__3d-t{
+  @include a0011;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--t) * 45deg)) translateZ(450px);
+
+  img{
+    height: 200px;
+    -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, $black);
+  }
+}
+
+.images__box2__text{
+  @include a55;
+  z-index: 1;
+  transform: translate(-50%);
+  perspective-origin: center;
+  color: $white;
+  font-weight: 600;
+  font-size: 50px;
+  text-transform: uppercase;
+  transform-style: preserve-3d;
+}
+
+
+
+/* section30 */
+#{$section}30{
+  flex-wrap: wrap;
+  background-color: $blackBlack;
+}
+
+.style__img{
+  width: 50%;
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+
+  img{
+    width: 100%;
+    @include a0011;
+    object-fit: cover;
+
+    &:nth-child(1){
+      filter: grayscale(1) contrast(5);
+      transition: all .1s linear;
+    }
+    
+    &:nth-child(2){
+      filter: grayscale(1) contrast(1) brightness(.5);
+      mix-blend-mode: hard-light;
+      transition: all .5s linear;
+    }
+    
+    &:hover{
+      filter: none !important;
+      mix-blend-mode: unset !important;
+    }
+  }
+}
+
+
+
+
+
+/* section33 images fly pixel*/
+#{$section}33{
+  box-sizing: border-box;
+  background: #0c3871;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 500px;
+
+  h2{
+    color: $white;
+    font-size: 10vw;
+    line-height: 100vh;
+    align-items: center;
+  }
+
+  &.active .sec33__blocks{animation: imageThreeDTwo 2s ease-in-out forwards;}
+}
+
+.banner{
+  @include a0011;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sec33__blocks{
+  position: relative;
+  display: block;
+  width: 2.5vw;
+  height: 5vh;
+  background: var(--img);
+  @include backFCNoI;
+  background-size: cover;
+  border: 1px solid rgba(0,0,0,.1);
+  animation: imageThreeD 2s ease-in-out 1s forwards;
+}

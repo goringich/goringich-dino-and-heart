@@ -1,0 +1,42 @@
+
+/* loader 6 */
+#{$section}6{
+  position: relative;
+  font-family: consolas;
+  overflow: hidden;
+  @include wh1;
+  background-color: $blackBlack;
+
+  h2{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    font-size: 10em;
+    color: $grayBlack;
+  }
+
+  span{
+    position: absolute;
+    bottom: -50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, .5);
+    animation: animate8 4s linear infinite;
+
+    &:hover, &:hover:after{transform: scale(1.2);}
+
+    &:after{
+      content: "";
+      @include a0011;
+      transform: scale(.25) translate(-70%, -70%);
+      background: radial-gradient($white, transparent);
+      border-radius: 50%;
+    }
+  }
+}
+
+.sc{transform: scale(1.5)}
+

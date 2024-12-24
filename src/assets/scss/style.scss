@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@500&display=swap&effect=shadow-multiple|3d|neon|fire-animation');
+@import "vendor/reset";
+@import "vars";
+@import "vendor/animation";
+
+section{
+  @include fcc;
+  min-height: 100vh;
+}
+
+body{
+  cursor: none;
+  width: 100vw;
+  overflow-x: hidden !important;
+  position: relative;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+.container{
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+
+  transform-style: preserve-3d;
+}
+
+.container2{
+  position: relative;
+  overflow: auto;
+  @include wh1;
+  background-blend-mode: multiply;
+  scroll-snap-type: y mandatory;
+
+  #{$section}:nth-child(1){margin-top: 0 !important;}
+}
+
+.container3{
+  position: absolute;
+  @include fcc;
+  @include wh1;
+  overflow: hidden;
+}
+
+/* sketch */
+.sketch{
+  position: absolute;
+  top: 100vh;
+}
+
+.burger__parent{
+  width: 25px;
+  position: fixed;
+  top: 9px;
+  right: 30px;
+  z-index: 1000;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.burger{
+  border-top: 3px solid $white;
+  border-bottom: 3px solid $white;
+  width: 20px;
+  height: 8px;
+  transition: transform .3s ease-in-out;
+  animation: burgerDo .1s linear;
+
+  &:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    height: 2.5px;
+    width: 20px;
+    z-index: 1000;
+    background-color: $white;
+    transition: transform .3s ease-in-out;
+  }
+
+  &.active{
+    border-top: 3px solid transparent !important;
+    transform: rotate(45deg) translateY(-75%);
+
+    &:after{
+      transform: rotate(-90deg) translate(-45%);
+    }
+  }
+
+  &.Alex{
+    border-color: $black;
+    &:after{background-color: $black}
+  }
+}
+
+// import
+@import "blocks/cursor";
+@import "blocks/scroll";
+@import "blocks/slide";
+@import "blocks/navigation";
+@import "blocks/particles";
+@import "blocks/header";
+@import "blocks/images";
+@import "blocks/flyImage";
+@import "blocks/earch";
+@import "blocks/eye";
+@import "blocks/fireText";
+@import "blocks/draw";
+@import "blocks/book";
+@import "blocks/textStrip";
+@import "blocks/card";
+@import "blocks/liquid";
+@import "blocks/calculator";
+@import "blocks/buttonRipple";
+@import "blocks/boxCardBorder";
+@import "blocks/flyParticleText";
+@import "blocks/textFly";
+@import "blocks/comet";
+@import "blocks/clock";
+@import "blocks/girlGoRoad";
+@import "blocks/pixelButton";
+@import "blocks/loader1";
+@import "blocks/loader2";
+@import "blocks/loader3";
+@import "blocks/loader5";
+@import "blocks/loader6";
+@import "blocks/loader8";
+@import "blocks/loader21";
+@import "blocks/дядяЛёша";
+@import "blocks/googleFonts";

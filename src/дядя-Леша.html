@@ -1,0 +1,61 @@
+---
+layout: default
+title: Дядя Леша
+---
+  <!-- <section class="section1">
+    <a href="pageScroll.html" class="btngr">Следующая страница</a>
+  </section> -->
+
+  <section class="section__google">
+    <div class="main2">
+      <div class="uncleAlex">
+        <span class="b b1">Д</span>
+        <span class="b b2">я</span>
+        <span class="b b3">д</span>
+        <span class="b b4">я</span>
+        <span class="b b5">Л</span>
+        <span class="b b6">е</span>
+        <span class="b b7">ш</span>
+        <span class="b b8">а</span>
+      </div>
+      <div class="search">
+        <input type="text" class="query">
+        <div class="icons">
+          <div class="icons1"><img src="assets/images/google/search.png" alt=""></div>
+          <div class="icons2"><img src="assets/images/google/mic.png" alt=""></div>
+        </div>
+        <div class="button__search">
+          <button>Дядя-Леша поиск</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- <section class="section1">
+    <a href="index.html" class="btngr">Самая первая страница</a>
+  </section> -->
+
+  <script>
+    const icon1 = document.querySelector(".icons1")
+    const button = document.querySelector(".button__search button")
+
+    const openUrl = () => {
+      let url = document.querySelector(".query").value
+      window.open("https://www.google.com/search?q=" + url)
+    }
+
+    button.onclick = openUrl
+    //function openUrl(){
+      //let url = document.querySelector(".query").value
+      //window.open("https://www.google.com/search?q=" + url)
+    //}
+    icon1.onclick = openUrl
+    //function openUrl(){
+      //let url = document.querySelector(".query").value
+      //window.open("https://www.google.com/search?q=" + url)
+    //}
+  </script>
+
+<style>.text{color: #000;}</style>

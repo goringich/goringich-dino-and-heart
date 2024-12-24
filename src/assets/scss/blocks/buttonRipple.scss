@@ -1,0 +1,69 @@
+
+/* section19 / button */
+#{$section}19{
+  background-color: #040d15;
+  justify-content: center;
+  align-items: center;
+}
+
+.button{
+  position: relative;
+
+  &:nth-child(2) .btn__neon{background: linear-gradient(90deg, #755bea, #ff72c0);}
+
+  &:hover{
+    .blur{
+      animation: backGrButton 8s linear infinite;
+      opacity: 1;
+    }
+
+    .btn__neon{
+      background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+      background-size: 400%;
+      animation: backGrButton 8s linear infinite;
+    }
+  }
+}
+
+.blur{
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 50px;
+  filter: blur(50px);
+  opacity: 0;
+  transition: opacity .5s linear;
+}
+
+.btn__neon{
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  padding: 25px 46px;
+  margin: 50px 30px 30px;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 45px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  user-select: none;
+  background: linear-gradient(90deg, #0162c8, #55e7fc);
+}
+
+.ripples{
+  @include a0011;
+  background-color: $white;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animateBtn 1s linear infinite;
+}

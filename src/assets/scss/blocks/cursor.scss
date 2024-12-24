@@ -1,0 +1,54 @@
+
+/* cursor */
+.text{
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+
+  position: absolute;
+  z-index: 1500;
+  color: $white;
+  font-size: 1em;
+  user-select: none;
+  pointer-events: none;
+
+  animation: cursor 7.5s linear infinite;
+  
+  &:after, &:before{
+    content: "";
+    position: absolute;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    transition: all .2s linear;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &:after{
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  &:before{
+    width: 10px;
+    height: 10px;
+    background-color:rgba(255, 255, 255, 0.5);
+  }
+
+  span{
+    position: absolute;
+    top: -100px;
+    text-transform: uppercase;
+    display: inline-block;
+    transform-origin: 0 100px;
+  }
+}
+
+button:hover .text:after, a:hover .text:after,
+button:hover .text:before, a:hover .text:before{
+  transform: translateX(-50%) translateY(-50%) scale(2) !important;
+}

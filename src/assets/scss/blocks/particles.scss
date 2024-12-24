@@ -1,0 +1,42 @@
+/* section16 */
+#{$section}16{position: relative;}
+
+.bg{
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  object-fit: cover;
+}
+
+#particles-js{
+  position: relative;
+  /* top: -1500vh; */
+  z-index: 10;
+  height: 175vh;
+  width: 100%;
+  background: $greenBlue;
+  mix-blend-mode: screen;
+}
+
+.btngr{
+  background: linear-gradient(-45deg, red, $greenBlue);
+  animation: animateColor 10s linear infinite;
+  border: none;
+  font-size: 6em;
+  margin: 0 auto;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 2em 1em 2.2em;
+  transform: none !important;
+}
+
+main{
+  mix-blend-mode: screen;
+  position: absolute;
+  z-index: 800;
+  bottom: 275vh;
+}

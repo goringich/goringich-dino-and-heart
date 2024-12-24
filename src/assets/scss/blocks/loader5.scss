@@ -1,0 +1,48 @@
+
+/* loader 5 */
+#{$section}5{
+  justify-content: space-between;
+  background-color: $black;
+}
+
+.circle5{
+  position: relative;
+  width: 550px;
+  height: 550px;
+  filter: url("#wavy") blur(1px);
+
+  &:nth-child(2):before{animation-delay: -2.5s;}
+  &:nth-child(3):before {animation-delay: -5s;}
+
+  &:before{
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    right: 100px;
+    bottom: 100px;
+    border: 10px solid $white;
+    border-radius: 50%;
+    box-shadow: 0 0 50px $green,
+                0 0 50px $green;
+    /* тень */
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #fff);
+  
+    animation: animate7 10s linear infinite;
+  }
+
+  &:after{
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    right: 100px;
+    bottom: 100px;
+    border: 10px solid $white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px $white,
+                0 0 20px $white;
+  }
+}
+
+svg{width: 0;}

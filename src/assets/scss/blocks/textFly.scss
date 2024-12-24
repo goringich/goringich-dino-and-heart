@@ -1,0 +1,17 @@
+
+/* section26 */
+#{$section}26{
+  box-sizing: border-box;
+  background-color: $black;
+  color: #00cefe;
+  background-color: #130e23;
+  font-family: "Roboto", sans-serif;
+  padding: 0 150px;
+  font-size: 1.2em;
+  overflow: hidden;
+}
+
+.fly__text span{
+  position: relative;
+  display: inline-block;
+}

@@ -1,0 +1,38 @@
+
+/* liquid  //section17 */
+#{$section}17{
+  position: relative;
+  background-color: $oceanBlue;
+
+  h2{
+    position: absolute;
+    font-size: 26vw;
+
+    &:nth-child(1){
+      color: $white;
+      text-shadow: -2px 2px 0 $oceanBlue,
+                  -4px 4px 0 $oceanBlue,
+                  -6px 6px 0 $oceanBlue,
+                  -8px 8px 0 $oceanBlue,
+                  -18px 18px 20px rgba(0, 0, 0, .5),
+                  -18px 18px 50px rgba(0, 0, 0, .5);
+    }
+    
+    &:nth-child(2){
+      color: #219bf3;
+      opacity: .5;
+      animation: animateWaterText 2s ease-in-out infinite;
+    }
+    
+    &:nth-child(3){
+      color: #219bf3;
+      opacity: .5;
+      animation: animateWaterText 4s ease-in-out infinite;
+    }
+    
+    &:nth-child(4){
+      color: #219bf3;
+      animation: animateWaterText 6s ease-in-out infinite;
+    }
+  }
+}

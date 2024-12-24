@@ -1,0 +1,26 @@
+#{$section}37{
+  background-color: #252839;
+
+  h2{
+    position: relative;
+    padding: 33px 0;
+    font-size: 8vw;
+    color: #252839;
+    letter-spacing: .7vw;
+    -webkit-text-stroke: .3vw #383d52;
+    text-transform: uppercase;
+
+    &:before{
+      content: attr(data-text);
+      @include a0011;
+      width: 20%;
+      padding-top: 50px;
+      transform: translateY(calc(-50px + 33px));
+      color: $secondgreen;
+      -webkit-text-stroke: .3vw $secondgreen;
+      border-right: 2px solid $secondgreen;
+      overflow: hidden;
+      animation: textBorder 7s linear infinite;
+    }
+  }
+}

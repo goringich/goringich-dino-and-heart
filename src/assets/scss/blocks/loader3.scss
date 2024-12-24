@@ -1,0 +1,70 @@
+
+/* loader 3 */
+#{$section}3{
+  background-color: $black;
+  position: relative;
+}
+
+#{$loader}3{
+  @include a55;
+  z-index: 2;
+  transform: translateX(-50%) translateY(-50%);
+
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 10px solid $black;
+
+  box-shadow: 0 0 5px $greenBlue,
+              0 0 25px $greenBlue,
+              0 0 50px $greenBlue,
+              0 0 200px $greenBlue;
+
+  animation: animate6 1.5s infinite linear;
+
+
+  &:hover #{$loader}3__inner:after,
+  &:hover #{$loader}3__inner{
+    opacity: 1;
+  }
+
+  &:after{
+    display: block;
+    @include wh1;
+    content: "";
+    border-radius: 50%;
+    border: 10px solid transparent;
+    border-top: 10px solid $greenBlue;
+    transform: translateX(-5%) translateY(-5%);
+  }
+}
+
+#{$loader}3__inner{
+  opacity: 0;
+  transition: opacity .5s linear;
+
+  box-shadow: 0 0 1px rgb(49, 49, 49),
+              0 0 2px rgb(49, 49, 49),
+              0 0 4px rgb(49, 49, 49),
+              0 0 20px rgb(49, 49, 49);
+  z-index: 100;
+
+  animation: animate6 infinite linear !important;
+
+  &:after{
+    opacity: 0;
+    transition: opacity .5s linear;
+    transform: translate(-8%, -6%);
+  }
+
+  &--1{
+    width: 150px;
+    height: 150px;
+  }
+  
+  &--2{
+    width: 100px;
+    height: 100px;
+    transition-delay: 0.5s;
+  }
+}
